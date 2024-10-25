@@ -1,5 +1,6 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { createDecoder, createSigner, createVerifier, VerifierSync, SignerSync } from 'fast-jwt';
+import * as bcrypt from 'bcrypt';
 
 import { JwtConfig } from '@Libs/Config/Schemas/JwtConfig';
 import { TokenServicePort } from '@Libs/Ports/TokenService.port';
@@ -61,5 +62,11 @@ export class JWTService implements TokenServicePort {
 	}
 	public signServiceToken({ payload }: JwtSignServiceDto): string {
 		return this.signService({ ...payload, isService: true });
+	}
+	public async hash(password: string): Promise<string> {
+		return bcrypt.hash(password, this.config.salt);
+	}
+	public async isMatch(password: string, hash: string): Promise<boolean> {
+		return await bcrypt.compare(password, hash);
 	}
 }

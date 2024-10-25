@@ -1,4 +1,4 @@
-import { IsString } from 'class-validator';
+import { IsNumber, IsString } from 'class-validator';
 
 export class JwtConfig {
 	@IsString()
@@ -21,4 +21,6 @@ export class JwtConfig {
 	public readonly serviceExpiresIn: string;
 	@IsString()
 	public readonly issuer: string;
+	@IsNumber()
+	public readonly salt: number;
 }

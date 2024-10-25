@@ -15,6 +15,7 @@ import { JWTModule } from '@Infrastructure/JWT/JWT.module';
 import { MongoExceptionsFilter } from '@Infrastructure/MongoDB/MongoExceptions.filter';
 
 import { HealthcheckController } from './HealtChecker.controller';
+import { TokenModule } from '@Modules/Token/Token.module';
 
 const interceptors = [
 	{
@@ -37,7 +38,8 @@ const httpControllers = [HealthcheckController];
 			inject: [ConfigSchema]
 		}),
 		RequestContextModule,
-		JWTModule
+		JWTModule,
+		TokenModule
 	],
 	controllers: [...httpControllers],
 	providers: [

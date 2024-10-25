@@ -1,0 +1,10 @@
+import { ApiProperty } from '@nestjs/swagger';
+
+export class LoginResponseDto {
+	@ApiProperty({
+		description: 'access token',
+		example:
+			'eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjAxSFNaWUE0MVA2RE0xWjk4VzVFM002SDlZIiwicGVybWlzc2lvbnMiOiIyMTEiLCJzZXJ2aWNlIjoic2VydmljZS0xIiwic2VydmljZURhdGEiOiJ7XCJkYXRhXCI6IFsxLCAyLCAzXX0iLCJpYXQiOjE3MTE2Mzk1NTIsImV4cCI6MTcxMTcyNTk1Mn0.LlaBCW3fyvI4XGP6Mo41xtQpeEBL0qdVYrrimob4Yr5ZxT38CbmYXv35aKdmqVqOmaA6LS5ZTgeKYTWBBi0JHNLbCwgy0ZeOBY7LTPLss7GZVsU_xmIzH4wit_XNCte0UhkAabomaKciJ6cVFcqh898LICmLsj-XEuk2Q_i6VRU'
+	})
+	public accessToken: string;
+}

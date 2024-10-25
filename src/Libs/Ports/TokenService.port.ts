@@ -11,4 +11,6 @@ export interface TokenServicePort {
 	decode(token: Buffer | string): ServiceTokenPayload<unknown> | TokenPayload<unknown>;
 	signTokens({ payload }: JwtSignTokensDto): Tokens;
 	signServiceToken({ payload }: JwtSignServiceDto): string;
+	hash(password: string): Promise<string>;
+	isMatch(password: string, hash: string): Promise<boolean>;
 }

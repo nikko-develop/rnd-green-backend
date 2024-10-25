@@ -1,69 +1,71 @@
 {
 	"name": "nest-backend-template",
-  "version": "0.0.0",
-  "description": "Nest Backend Template",
-  "type": "commonjs",
+	"version": "0.0.0",
+	"description": "Nest Backend Template",
+	"type": "commonjs",
 	"author": "Nikko Develop",
-  "license": "UNLICENSED",
-  "engines": {
-    "node": ">=16",
-    "npm": ">=10"
-  },
+	"license": "UNLICENSED",
+	"engines": {
+		"node": ">=16",
+		"npm": ">=10"
+	},
 	"scripts": {
 		"build": "nest build",
-    "lint": "pnpm exec eslint",
-    "migrate": "migrate-mongo",
-    "migrations:up": "npm run build && npm run migrate up",
-    "migrations:down": "npm run build npm run migrate down",
-    "migrations:status": "npm run build npm run migrate status",
-    "prebuild": "rimraf dist",
-    "prepare": "husky",
-    "start": "nest start",
-    "start:debug": "nest start --watch --debug",
-    "start:dev": "nest start --watch",
-    "start:prod": "node dist/main",
-    "test": "pnpm exec jest --passWithNoTests",
-    "test:cov": "pnpm exec jest --coverage=true",
-    "test:watch": "pnpm exec jest --watch"
+		"lint": "pnpm exec eslint",
+		"migrate": "migrate-mongo",
+		"migrations:up": "npm run build && npm run migrate up",
+		"migrations:down": "npm run build npm run migrate down",
+		"migrations:status": "npm run build npm run migrate status",
+		"prebuild": "rimraf dist",
+		"prepare": "husky",
+		"start": "nest start",
+		"start:debug": "nest start --watch --debug",
+		"start:dev": "nest start --watch",
+		"start:prod": "node dist/main",
+		"test": "pnpm exec jest --passWithNoTests",
+		"test:cov": "pnpm exec jest --coverage=true",
+		"test:watch": "pnpm exec jest --watch"
 	},
 	"dependencies": {
 		"@fastify/cookie": "^9.3.1",
 		"@fastify/static": "^7.0.1",
-		"@nestjs/mongoose": "^10.0.4",
 		"@nestjs/common": "^10.3.3",
 		"@nestjs/config": "^3.2.0",
 		"@nestjs/core": "^10.3.3",
 		"@nestjs/cqrs": "^10.2.7",
 		"@nestjs/event-emitter": "^2.0.4",
+		"@nestjs/mongoose": "^10.0.4",
 		"@nestjs/platform-fastify": "^10.3.8",
 		"@nestjs/schedule": "^4.0.1",
 		"@nestjs/swagger": "^7.4.2",
 		"axios": "^1.7.5",
-		"migrate-mongo": "^11.0.0",
-		"mongoose": "^8.2.2",
-		"nestjs-pino": "^4.0.0",
-		"pino-http": "^9.0.0",
+		"bcrypt": "^5.1.1",
 		"class-transformer": "^0.5.1",
 		"class-validator": "^0.14.1",
 		"fast-jwt": "^4.0.0",
 		"fastify": "^4.26.2",
 		"lodash": "^4.17.21",
+		"migrate-mongo": "^11.0.0",
+		"mongoose": "^8.2.2",
 		"nest-typed-config": "^2.9.3",
+		"nestjs-pino": "^4.0.0",
 		"nestjs-request-context": "^3.0.0",
+		"pino-http": "^9.0.0",
 		"reflect-metadata": "^0.2.1",
 		"rimraf": "^5.0.5",
 		"rxjs": "^7.8.1",
 		"ulid": "^2.3.0"
 	},
 	"devDependencies": {
-    "@types/jest": "^29.5.12",
-    "@types/lodash": "^4.17.0",
 		"@eslint/compat": "^1.1.1",
 		"@eslint/eslintrc": "^3.1.0",
 		"@eslint/js": "^9.11.1",
 		"@nestjs/cli": "^10.0.0",
 		"@nestjs/schematics": "^10.0.0",
 		"@nestjs/testing": "^10.0.0",
+		"@types/bcrypt": "^5.0.2",
+		"@types/jest": "^29.5.12",
+		"@types/lodash": "^4.17.0",
 		"@types/node": "^20.3.1",
 		"@typescript-eslint/parser": "^8.6.0",
 		"eslint": "^9.11.1",
@@ -85,9 +87,9 @@
 		"typescript-eslint": "^8.7.0"
 	},
 	"lint-staged": {
-    "*.ts": [
-      "eslint --fix",
-      "prettier -w"
-    ]
-  }
+		"*.ts": [
+			"eslint --fix",
+			"prettier -w"
+		]
+	}
 }
