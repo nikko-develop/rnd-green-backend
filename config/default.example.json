@@ -1,0 +1,50 @@
+{
+  "JWT": {
+      "accessPrivateKey": "",
+      "accessPublicKey": "",
+      "refreshPrivateKey": "",
+      "refreshPublicKey": "",
+      "servicePrivateKey": "",
+      "servicePublicKey": "",
+      "accessExpiresIn": "10m",
+      "serviceExpiresIn": "1000y",
+      "refreshExpiresIn": "1d",
+      "issuer": "Nikko"
+  },
+  "cookie": {
+      "secret": ""
+  },
+  "mongo": {
+    "auth": {
+      "database": "",
+      "password": "",
+      "stype": "",
+      "user": ""
+    },
+    "clusterName": "",
+    "database": "",
+    "instances": [
+      {
+        "ip": "",
+        "port": 27017
+      },
+      {
+        "ip": "",
+        "port": 27017
+      },
+      {
+        "ip": "",
+        "port": 27017
+      }
+    ],
+    "is_cluster": true,
+    "options": {
+      "maxIdleTimeMS": 0,
+      "maxPoolSize": 100
+    },
+    "type": "replicaset",
+    "use": true
+  },
+  "name": "nest-backend",
+  "port": "2242"
+}
